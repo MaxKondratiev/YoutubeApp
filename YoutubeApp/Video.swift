@@ -45,7 +45,7 @@ struct Video: Decodable {
         let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
         self.thumbnail = try highContainer.decode(String.self, forKey: .thumbnail)
         // One more nested obj to get "videoId"
-        let resourceContainer = try highContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
+        let resourceContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
         self.videoId = try resourceContainer.decode(String.self, forKey: .videoId)
          
     }
