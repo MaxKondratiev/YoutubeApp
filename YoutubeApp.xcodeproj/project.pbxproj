@@ -17,6 +17,9 @@
 		12A07D6326DF9F7300A60A49 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A07D6226DF9F7300A60A49 /* Video.swift */; };
 		12A07D6626DFA02000A60A49 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A07D6526DFA02000A60A49 /* Model.swift */; };
 		12A07D6926DFE16C00A60A49 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A07D6826DFE16C00A60A49 /* Response.swift */; };
+		12A07D6C26DFF66400A60A49 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A07D6B26DFF66400A60A49 /* VideoCell.swift */; };
+		12A07D7426DFFF7F00A60A49 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A07D7326DFFF7F00A60A49 /* CacheManager.swift */; };
+		12A07D7726E1472500A60A49 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A07D7626E1472500A60A49 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		12A07D6226DF9F7300A60A49 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		12A07D6526DFA02000A60A49 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		12A07D6826DFE16C00A60A49 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		12A07D6B26DFF66400A60A49 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		12A07D7326DFFF7F00A60A49 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		12A07D7626E1472500A60A49 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +70,54 @@
 		12A07D4926DF941200A60A49 /* YoutubeApp */ = {
 			isa = PBXGroup;
 			children = (
+				12A07D7126DFF69E00A60A49 /* Helpers */,
+				12A07D7026DFF69000A60A49 /* Controllers */,
+				12A07D6F26DFF68100A60A49 /* Views */,
+				12A07D6E26DFF67900A60A49 /* Model */,
 				12A07D4A26DF941200A60A49 /* AppDelegate.swift */,
 				12A07D4C26DF941200A60A49 /* SceneDelegate.swift */,
-				12A07D4E26DF941200A60A49 /* ViewController.swift */,
 				12A07D5026DF941200A60A49 /* Main.storyboard */,
 				12A07D5326DF941700A60A49 /* Assets.xcassets */,
 				12A07D5526DF941700A60A49 /* LaunchScreen.storyboard */,
 				12A07D5826DF941700A60A49 /* Info.plist */,
-				12A07D5F26DF9D1F00A60A49 /* Constants.swift */,
+			);
+			path = YoutubeApp;
+			sourceTree = "<group>";
+		};
+		12A07D6E26DFF67900A60A49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				12A07D6226DF9F7300A60A49 /* Video.swift */,
 				12A07D6526DFA02000A60A49 /* Model.swift */,
 				12A07D6826DFE16C00A60A49 /* Response.swift */,
 			);
-			path = YoutubeApp;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12A07D6F26DFF68100A60A49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12A07D6B26DFF66400A60A49 /* VideoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12A07D7026DFF69000A60A49 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12A07D4E26DF941200A60A49 /* ViewController.swift */,
+				12A07D7626E1472500A60A49 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		12A07D7126DFF69E00A60A49 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				12A07D5F26DF9D1F00A60A49 /* Constants.swift */,
+				12A07D7326DFFF7F00A60A49 /* CacheManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,10 +191,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				12A07D4F26DF941200A60A49 /* ViewController.swift in Sources */,
+				12A07D7426DFFF7F00A60A49 /* CacheManager.swift in Sources */,
+				12A07D6C26DFF66400A60A49 /* VideoCell.swift in Sources */,
 				12A07D4B26DF941200A60A49 /* AppDelegate.swift in Sources */,
 				12A07D4D26DF941200A60A49 /* SceneDelegate.swift in Sources */,
 				12A07D6626DFA02000A60A49 /* Model.swift in Sources */,
 				12A07D6026DF9D1F00A60A49 /* Constants.swift in Sources */,
+				12A07D7726E1472500A60A49 /* DetailViewController.swift in Sources */,
 				12A07D6326DF9F7300A60A49 /* Video.swift in Sources */,
 				12A07D6926DFE16C00A60A49 /* Response.swift in Sources */,
 			);

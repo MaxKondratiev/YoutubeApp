@@ -49,11 +49,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
        
-        cell.textLabel?.text = self.videosArray[indexPath.row].title
+        let oneVideo = self.videosArray[indexPath.row]
+        
+        cell.setCell(oneVideo)
 
         return cell
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard tableView.indexPathForSelectedRow != nil else {
+            return
+        }
+        let selectedVideo = videosArray[tableView.indexPathForSelectedRow!.row]
+        
+        let detailsVC = segue.destination as! DetailViewController
+        detailsVC.video = selectedVideo
+        
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
